@@ -1,0 +1,31 @@
+.test-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    font-size: x-large;
+    line-height: 1em;
+}
+
+.back {
+    margin-top: 5%;
+    border: none;
+    background: linear-gradient(5deg, black, #383838);
+    letter-spacing: 5px;
+    height:40px;
+    width:100px;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+}
+
+.back:hover {
+    cursor: pointer;
+    background: linear-gradient(5deg, rgb(15, 15, 15), #4b4b4b);
+}
+
+mat-list-item{
+    line-height: 1.5em;
+}

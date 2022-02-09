@@ -1,0 +1,11 @@
+<div class="test-container">
+    <div mat-subheader>{{data.date | date: 'fullDate'}}</div>
+    <mat-list-item>
+        <div mat-line>{{data.price | currency}}</div>
+        <div mat-line>{{data.cop | currency: 'COP '}}</div>
+        <div mat-line>{{data.eur | currency: 'EUR '}}</div>
+
+        <div mat-line> </div>
+    </mat-list-item>
+    <button routerLink="/list" class="back">Back</button>
+</div>
