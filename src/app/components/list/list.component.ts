@@ -22,6 +22,7 @@ export class ListComponent implements OnInit {
   days: number = 14;
   isRefresh: boolean = false;
   error: string = '';
+  class: string = '';
 
   constructor(
     private apiService: ApiService,
@@ -78,6 +79,7 @@ export class ListComponent implements OnInit {
     this.error = '';
     this.apiService.getBtcPriceByDate(date.toISOString().split('T')[0])
       .subscribe((data:any) => {
+        this.class = this.prices[0].price <= data.data.amount ? 'refreshUp':'refreshDown';
         this.prices[0] = {
           price: data.data.amount,
           eur: data.data.amount*environment.eur,

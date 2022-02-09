@@ -11,7 +11,7 @@
         </div> 
         
         <div *ngIf="prices.length == days">
-            <mat-list-item [ngClass]="isRefresh && i === 0 ? 'refresh':'item'" 
+            <mat-list-item [ngClass]="isRefresh && i === 0 ? class:'item'" 
             *ngFor="let price of sortByDate; let i = index" (click)="goToDetails(price)">
                 <div mat-line>{{price.price | currency}}</div>
                 <div mat-line> {{price.date | date}} </div>
