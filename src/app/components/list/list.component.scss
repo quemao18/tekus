@@ -1,0 +1,22 @@
+.test-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 18%;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #e8fbff;
+    border-radius: 10px;
+}
+
+.refresh {
+    background-color: rgb(132, 255, 189);
+    border-radius: 10px;
+}

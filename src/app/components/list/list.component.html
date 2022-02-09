@@ -1,0 +1,21 @@
+<div class="test-container">
+    <mat-selection-list>
+        <div *ngIf="error === ''" mat-subheader>
+            {{prices.length < days ? 'Loading...': 'Price of the last ' + days + ' days of BTC'}}&nbsp;&nbsp;
+            <mat-icon *ngIf="prices.length === days" mat-list-icon>paid</mat-icon>
+        </div> 
+
+        <div style="color: red" *ngIf="error !== ''" mat-subheader>
+            Error loading data...
+            <a (click)="getPrices()" href="#" routerLink="/list"><mat-icon mat-list-icon>refresh</mat-icon></a>
+        </div> 
+        
+        <div *ngIf="prices.length == days">
+            <mat-list-item [ngClass]="isRefresh && i === 0 ? 'refresh':'item'" 
+            *ngFor="let price of sortByDate; let i = index" (click)="goToDetails(price)">
+                <div mat-line>{{price.price | currency}}</div>
+                <div mat-line> {{price.date | date}} </div>
+            </mat-list-item>
+        </div>
+    </mat-selection-list>
+</div>
